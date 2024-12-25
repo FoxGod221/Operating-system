@@ -1,0 +1,34 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        // Deveco auto-generated start
+        {
+            "type": "deveco-device-tool-debug",
+            "request": "launch",
+            "DevEcoDebugInitPath": "${workspaceRoot}/.deveco/.debug-cache/bs25",
+            "servertype": "jlink",
+            "name": "bs25: DevEco GDB Launch",
+            "executable": "C:/Users/Administrator/DevEcoStudioProjects/MyApplication2/.deveco/build/bs25/target.elf",
+            "toolchainBinDir": "",
+            "projectEnvName": "bs25",
+            "coreDir": "C:/Program Files/Huawei/DevEco-Device-Tool/core",
+            "preLaunchTask": "deveco: run debug server - bs25",
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "type": "deveco-device-tool-debug",
+            "request": "attach",
+            "DevEcoDebugInitPath": "${workspaceRoot}/.deveco/.debug-cache/bs25",
+            "servertype": "jlink",
+            "name": "bs25: DevEco GDB Attach",
+            "executable": "C:/Users/Administrator/DevEcoStudioProjects/MyApplication2/.deveco/build/bs25/target.elf",
+            "toolchainBinDir": "",
+            "projectEnvName": "bs25",
+            "coreDir": "C:/Program Files/Huawei/DevEco-Device-Tool/core",
+            "preLaunchTask": "deveco: run debug server - bs25",
+            "internalConsoleOptions": "openOnSessionStart"
+        }
+        // Deveco auto-generated end
+
+    ]
+}

@@ -1,0 +1,50 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "C:/Users/Fox/.ohos/config/openharmony/default_MyApplication2_aPBS9t0Wo7htfOKiGt6j47kcyaH79eungGZLxb9Isr0=.cer",
+          "storePassword": "0000001B7FACFF57AF64B8B4875621E719ACA561BF25A2F7373FB5D04F0B999FE951724A8C09108CBF6D08",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BE28B442304111965BB9C768F5561726E125BBB1A24407FF7CD272828D63D9F979F394AE6AB0541",
+          "profile": "C:/Users/Fox/.ohos/config/openharmony/default_MyApplication2_aPBS9t0Wo7htfOKiGt6j47kcyaH79eungGZLxb9Isr0=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:/Users/Fox/.ohos/config/openharmony/default_MyApplication2_aPBS9t0Wo7htfOKiGt6j47kcyaH79eungGZLxb9Isr0=.p12"
+        }
+      }
+    ],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "compileSdkVersion": 11,
+        "compatibleSdkVersion": 11,
+        "runtimeOS": "OpenHarmony",
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug",
+      },
+      {
+        "name": "release"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}

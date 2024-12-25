@@ -1,0 +1,222 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 264241152 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3769), pid=24660, tid=19376
+#
+# JRE version:  (17.0.6+10) (build )
+# Java VM: OpenJDK 64-Bit Server VM (17.0.6+10-b829.5, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=utf-8 D:\Harmony\API\11\toolchains\lib\app_packing_tool.jar --mode hap --force true --lib-path C:\Users\Fox\Desktop\MyApplication2\entry\build\default\intermediates\stripped_native_libs\default --json-path C:\Users\Fox\Desktop\MyApplication2\entry\build\default\intermediates\res\default\module.json --resources-path C:\Users\Fox\Desktop\MyApplication2\entry\build\default\intermediates\res\default\resources --index-path C:\Users\Fox\Desktop\MyApplication2\entry\build\default\intermediates\res\default\resources.index --pack-info-path C:\Users\Fox\Desktop\MyApplication2\entry\build\default\outputs\default\pack.info --out-path C:\Users\Fox\Desktop\MyApplication2\entry\build\default\outputs\default\entry-default-unsigned.hap --ets-path C:\Users\Fox\Desktop\MyApplication2\entry\build\default\intermediates\loader_out\default\ets
+
+Host: AMD Ryzen 9 7945HX with Radeon Graphics        , 32 cores, 15G,  Windows 11 , 64 bit Build 22621 (10.0.22621.4391)
+Time: Sun Dec 15 15:21:25 2024  Windows 11 , 64 bit Build 22621 (10.0.22621.4391) elapsed time: 0.021579 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001d93e123df0):  JavaThread "Unknown thread" [_thread_in_vm, id=19376, stack(0x000000763b000000,0x000000763b100000)]
+
+Stack: [0x000000763b000000,0x000000763b100000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x683b4a]
+V  [jvm.dll+0x842654]
+V  [jvm.dll+0x843dfe]
+V  [jvm.dll+0x844463]
+V  [jvm.dll+0x249b75]
+V  [jvm.dll+0x680a19]
+V  [jvm.dll+0x674f0a]
+V  [jvm.dll+0x309acb]
+V  [jvm.dll+0x310f86]
+V  [jvm.dll+0x3608ee]
+V  [jvm.dll+0x360b1f]
+V  [jvm.dll+0x2dfbf8]
+V  [jvm.dll+0x2e0b64]
+V  [jvm.dll+0x813f41]
+V  [jvm.dll+0x36e6a1]
+V  [jvm.dll+0x7f347c]
+V  [jvm.dll+0x3f0e8f]
+V  [jvm.dll+0x3f29d1]
+C  [jli.dll+0x526b]
+C  [ucrtbase.dll+0x29333]
+C  [KERNEL32.DLL+0x1259d]
+C  [ntdll.dll+0x5af38]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ff90babc058, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001d93e192dd0 GCTaskThread "GC Thread#0" [stack: 0x000000763b100000,0x000000763b200000] [id=24664]
+  0x000001d93e141da0 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000763b200000,0x000000763b300000] [id=18512]
+  0x000001d93e1a57d0 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000763b300000,0x000000763b400000] [id=5916]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff90b270797]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000001d93e11f0b0] Heap_lock - owner thread: 0x000001d93e123df0
+
+Heap address: 0x0000000704e00000, size: 4018 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x0000000704e00000, 0x0000000800000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff90b65d939]
+
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.008 Loaded shared library D:\Harmony\DevEco\DevEco Studio\jbr\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff7d3580000 - 0x00007ff7d358a000 	D:\Harmony\DevEco\DevEco Studio\jbr\bin\java.exe
+0x00007ff962430000 - 0x00007ff962647000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ff960f30000 - 0x00007ff960ff4000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ff95f7f0000 - 0x00007ff95fba9000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ff95fc60000 - 0x00007ff95fd71000 	C:\Windows\System32\ucrtbase.dll
+0x00007ff934790000 - 0x00007ff9347ab000 	D:\Harmony\DevEco\DevEco Studio\jbr\bin\VCRUNTIME140.dll
+0x00007ff934690000 - 0x00007ff9346a7000 	D:\Harmony\DevEco\DevEco Studio\jbr\bin\jli.dll
+0x00007ff9620d0000 - 0x00007ff96227e000 	C:\Windows\System32\USER32.dll
+0x00007ff95fc30000 - 0x00007ff95fc56000 	C:\Windows\System32\win32u.dll
+0x00007ff962280000 - 0x00007ff9622a9000 	C:\Windows\System32\GDI32.dll
+0x00007ff960000000 - 0x00007ff96011b000 	C:\Windows\System32\gdi32full.dll
+0x00007ff949eb0000 - 0x00007ff94a142000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.4391_none_2715d37f73803e96\COMCTL32.dll
+0x00007ff95ff60000 - 0x00007ff95fffa000 	C:\Windows\System32\msvcp_win.dll
+0x00007ff9614e0000 - 0x00007ff961587000 	C:\Windows\System32\msvcrt.dll
+0x00007ff960a20000 - 0x00007ff960a51000 	C:\Windows\System32\IMM32.DLL
+0x00007ff93f490000 - 0x00007ff93f49c000 	D:\Harmony\DevEco\DevEco Studio\jbr\bin\vcruntime140_1.dll
+0x00007ff913510000 - 0x00007ff91359d000 	D:\Harmony\DevEco\DevEco Studio\jbr\bin\msvcp140.dll
+0x00007ff90af80000 - 0x00007ff90bbed000 	D:\Harmony\DevEco\DevEco Studio\jbr\bin\server\jvm.dll
+0x00007ff960880000 - 0x00007ff960932000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ff961280000 - 0x00007ff961327000 	C:\Windows\System32\sechost.dll
+0x00007ff960120000 - 0x00007ff960148000 	C:\Windows\System32\bcrypt.dll
+0x00007ff961160000 - 0x00007ff961274000 	C:\Windows\System32\RPCRT4.dll
+0x00007ff95a6f0000 - 0x00007ff95a724000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ff9585c0000 - 0x00007ff9585ca000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ff939b90000 - 0x00007ff939b99000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ff960940000 - 0x00007ff9609b1000 	C:\Windows\System32\WS2_32.dll
+0x00007ff95e860000 - 0x00007ff95e878000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ff95b4e0000 - 0x00007ff95b4ea000 	D:\Harmony\DevEco\DevEco Studio\jbr\bin\jimage.dll
+0x00007ff95cf60000 - 0x00007ff95d192000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ff960a60000 - 0x00007ff960def000 	C:\Windows\System32\combase.dll
+0x00007ff960df0000 - 0x00007ff960ec7000 	C:\Windows\System32\OLEAUT32.dll
+0x00007ff92ea10000 - 0x00007ff92ea42000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ff95fbb0000 - 0x00007ff95fc2b000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ff9368e0000 - 0x00007ff936905000 	D:\Harmony\DevEco\DevEco Studio\jbr\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;D:\Harmony\DevEco\DevEco Studio\jbr\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.4391_none_2715d37f73803e96;D:\Harmony\DevEco\DevEco Studio\jbr\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=utf-8 
+java_command: D:\Harmony\API\11\toolchains\lib\app_packing_tool.jar --mode hap --force true --lib-path C:\Users\Fox\Desktop\MyApplication2\entry\build\default\intermediates\stripped_native_libs\default --json-path C:\Users\Fox\Desktop\MyApplication2\entry\build\default\intermediates\res\default\module.json --resources-path C:\Users\Fox\Desktop\MyApplication2\entry\build\default\intermediates\res\default\resources --index-path C:\Users\Fox\Desktop\MyApplication2\entry\build\default\intermediates\res\default\resources.index --pack-info-path C:\Users\Fox\Desktop\MyApplication2\entry\build\default\outputs\default\pack.info --out-path C:\Users\Fox\Desktop\MyApplication2\entry\build\default\outputs\default\entry-default-unsigned.hap --ets-path C:\Users\Fox\Desktop\MyApplication2\entry\build\default\intermediates\loader_out\default\ets
+java_class_path (initial): D:\Harmony\API\11\toolchains\lib\app_packing_tool.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 15                                        {product} {ergonomic}
+     uint ConcGCThreads                            = 6                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 23                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 264241152                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4213178368                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 8192380                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 121732930                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 121732930                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 4213178368                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=D:\Harmony\DevEco\DevEco Studio\jbr
+PATH=D:\Harmony\DevEco\DevEco Studio\jbr\bin;D:/Harmony/SDK111;G:\VM\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\MinGW\mingw64\bin;D:\Git\Git\cmd;D:\Python\Python10\Scripts\;D:\Python\Python10\;C:\Users\Fox\AppData\Local\Microsoft\WindowsApps;C:\Pycharm\PyCharm Community Edition 2024.1.2\bin;C:\Users\Fox\AppData\Local\Programs\Microsoft VS Code\bin;D:\Conda\Anyconda;D:\Conda\Anyconda\Scripts;D:\Conda\Anyconda\Library;D:\Cmake\cmake-3.30.3-windows-x86_64\bin;C:\Users\Fox\Desktop\Game\QQGameTempest\Hall.58319\;D:\Harmony\DevEco\DevEco Studio\bin;;D:\Harmony\SDK111;D:\Harmony\DevEco\DevEco Studio\jbr\bin;G:\VM\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\MinGW\mingw64\bin;D:\Git\Git\cmd;D:\Python\Python10\Scripts\;D:\Python\Python10\;C:\Users\Fox\AppData\Local\Microsoft\WindowsApps;C:\Pycharm\PyCharm Community Edition 2024.1.2\bin;C:\Users\Fox\AppData\Local\Programs\Microsoft VS Code\bin;D:\Conda\Anyconda;D:\Conda\Anyconda\Scripts;D:\Conda\Anyconda\Library;D:\Cmake\cmake-3.30.3-windows-x86_64\bin;C:\Users\Fox\Desktop\Game\QQGameTempest\Hall.58319\;D:\Harmony\DevEco\DevEco Studio\bin;
+USERNAME=Fox
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD
+TMP=C:\Users\Fox\AppData\Local\Temp
+TEMP=C:\Users\Fox\AppData\Local\Temp
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22621 (10.0.22621.4391)
+OS uptime: 0 days 6:46 hours
+
+CPU: total 32 (initial active 32) (32 cores per cpu, 2 threads per core) family 25 model 97 stepping 2 microcode 0x0, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4a, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, avx512f, avx512dq, avx512cd, avx512bw, avx512vl, sha, fma, vzeroupper, avx512_vpopcntdq, avx512_vpclmulqdq, avx512_vaes, avx512_vnni, clflush, clflushopt, avx512_vbmi2, avx512_vbmi
+
+Memory: 4k page, system-wide physical 16064M (4167M free)
+TotalPageFile size 16064M (AvailPageFile size 236M)
+current process WorkingSet (physical memory assigned to process): 13M, peak: 13M
+current process commit charge ("private bytes"): 91M, peak: 343M
+
+vm_info: OpenJDK 64-Bit Server VM (17.0.6+10-b829.5) for windows-amd64 JRE (17.0.6+10-b829.5), built on 2023-02-24 by "builduser" with MS VC++ 16.10 / 16.11 (VS2019)
+
+END.
